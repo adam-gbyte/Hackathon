@@ -16,8 +16,8 @@
     </button>
 </section>
 
-<section class="py-20 bg-white px-6">
-    <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Fitur Utama</h2>
+<section class="py-20 px-6">
+    <h2 class="text-3xl font-bold text-center mb-12">Fitur Utama</h2>
 
     <div class="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
         <div class="p-6 bg-blue-50 rounded-2xl shadow-sm">
@@ -37,9 +37,9 @@
     </div>
 </section>
 
-<section class="py-20 bg-gray-50 px-6 text-center">
-    <h2 class="text-3xl font-bold text-gray-800 mb-4">Ayo Dukung Produk UMKM Lokal</h2>
-    <p class="text-gray-600 max-w-2xl mx-auto mb-8">
+<section class="py-20 px-6 text-center">
+    <h2 class="text-3xl font-bold mb-4">Ayo Dukung Produk UMKM Lokal</h2>
+    <p class="max-w-2xl mx-auto mb-8">
         Bergabung sekarang dan bantu kembangkan usaha kecil di seluruh Indonesia dengan teknologi.
     </p>
 

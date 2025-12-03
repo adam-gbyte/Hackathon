@@ -8,6 +8,7 @@
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
+	<title>Rekomendasi Produk UMKM</title>
 </svelte:head>
 
 <Navbar />
