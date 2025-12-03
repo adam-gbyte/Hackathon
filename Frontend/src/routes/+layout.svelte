@@ -13,6 +13,6 @@
 
 <Navbar />
 
-<main class="h-full bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-100 ">
+<main class="h-full dark:bg-gray-800 text-gray-800 dark:text-gray-100 ">
 	{@render children()}
 </main>
