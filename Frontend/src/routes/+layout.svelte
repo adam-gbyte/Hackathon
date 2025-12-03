@@ -2,7 +2,7 @@
 	import './layout.css';
 	import favicon from '$lib/assets/favicon.svg';
 	import Navbar from '$lib/components/Navbar.svelte';
-	
+
 	let { children } = $props();
 </script>
 
@@ -13,6 +13,6 @@
 
 <Navbar />
 
-<main class="h-full dark:bg-gray-800 text-gray-800 dark:text-gray-100 ">
+<main class="h-full text-gray-800 dark:bg-gray-800 dark:text-gray-100">
 	{@render children()}
 </main>

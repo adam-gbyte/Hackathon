@@ -1,39 +1,49 @@
 <script>
-	import { onMount, onDestroy } from "svelte";
+	import { postLocation } from '$lib/api/location';
+	import { onMount, onDestroy } from 'svelte';
 
+	let watchId = null;
 	let lat = null;
 	let lon = null;
-	let error = "";
-	let watchId = null;
 
 	onMount(() => {
-		if ("geolocation" in navigator) {
+		if ('geolocation' in navigator) {
 			watchId = navigator.geolocation.watchPosition(
 				(pos) => {
 					lat = pos.coords.latitude;
 					lon = pos.coords.longitude;
+
+					// Kirim ke backend setiap update
+					sendLocation(lat, lon);
 				},
 				(err) => {
-					error = err.message;
+					console.error('Error GPS:', err);
+				},
+				{
+					enableHighAccuracy: true
 				}
 			);
-		} else {
-			error = "Geolocation tidak didukung browser";
 		}
 	});
+
+	async function sendLocation(lat, lon) {
+		try {
+			await postLocation(lat, lon);
+		} catch (error) {
+			console.error('Gagal kirim lokasi:', error);
+		}
+	}
 
 	onDestroy(() => {
 		if (watchId) navigator.geolocation.clearWatch(watchId);
 	});
 </script>
 
-<section class="p-4 h-screen mt-23 scroll-mt-25 flex items-center justify-center w-screen">
-    <div class="max-w-3xl w-full h-full text-center justify-center flex flex-col items-center dark:bg-gray-600 bg-gray-200 rounded-xl">
-        {#if error}
-            <p class="text-red-500">{error}</p>
-        {:else}
-            <p><strong>Latitude:</strong> {lat}</p>
-            <p><strong>Longitude:</strong> {lon}</p>
-        {/if}
-    </div>
+<section class="mt-23 flex h-screen w-screen scroll-mt-25 items-center justify-center p-4">
+	<div
+		class="flex h-full w-full max-w-3xl flex-col items-center justify-center rounded-xl bg-gray-200 text-center dark:bg-gray-600"
+	>
+		<p><strong>Latitude:</strong> {lat}</p>
+		<p><strong>Longitude:</strong> {lon}</p>
+	</div>
 </section>

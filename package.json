@@ -3,16 +3,21 @@
   "version": "1.0.0",
   "description": "",
   "workspaces": [
-    "Frontend"
+    "Frontend",
+    "Backend"
   ],
   "scripts": {
-    "start": "concurrently \"npm run dev --workspace Frontend\""
+    "start": "concurrently \"npm run dev --workspace Backend\" \"npm run dev --workspace Frontend\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-    "concurrently": "^9.2.1"
+    "concurrently": "^9.2.1",
+    "prettier": "^3.7.4",
+    "prettier-plugin-organize-imports": "^4.3.0",
+    "prettier-plugin-svelte": "^3.4.0",
+    "prettier-plugin-tailwindcss": "^0.7.2"
   }
 }

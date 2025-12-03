@@ -30,7 +30,9 @@
 <nav
 	class={`fixed top-0 left-0 z-50 flex w-full items-center justify-between bg-gray-100 px-10 py-6 md:flex-row dark:bg-gray-900 dark:text-white`}
 >
-	<h1 class="text-xl font-bold text-gray-900 md:text-2xl dark:text-gray-200">REKOMENDASI PRODUK UMKM</h1>
+	<h1 class="text-xl font-bold text-gray-900 md:text-2xl dark:text-gray-200">
+		REKOMENDASI PRODUK UMKM
+	</h1>
 
 	<div class={`hidden items-center space-x-6 md:flex`}>
 		<ul class="flex items-center space-x-8 text-sm font-semibold">
