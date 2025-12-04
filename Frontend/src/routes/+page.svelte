@@ -3,26 +3,26 @@
 </script>
 
 <section
-	class="flex min-h-screen scroll-mt-24 sm:flex-row flex-col items-center justify-center px-6 text-center"
+	class="flex min-h-screen scroll-mt-24 flex-col-reverse sm:flex-row items-center justify-center px-6 py-10 gap-10"
 >
-	<div class="h-full w-1/2 bg-amber-100">
-		<div class="h-1/2 bg-amber-200">Halo nama saya Adam1</div>
-		<div class="h-1/2 bg-amber-300">Halo nama saya Adam2</div>
+	<!-- KIRI -->
+	<div class="w-full sm:w-1/2 flex flex-col gap-4">
+		<div class="p-6 rounded-2xl bg-amber-200 shadow-md text-gray-800 text-lg font-semibold">
+			Kami membantu UMKM berkembang dengan solusi digital yang efektif.
+		</div>
+		<div class="p-6 rounded-2xl bg-amber-300 shadow-md text-gray-800 text-lg font-semibold">
+			Temukan layanan terbaik untuk mengoptimalkan bisnis Anda.
+		</div>
 	</div>
-	<div class="w-1/2">
-		<img src="https://kontrakhukum.com/media/2022/11/peran-umkm-dalam-resesi.jpg" alt="UMKM" />
-	</div>
-	<!-- <h1 class="text-4xl md:text-6xl font-bold mb-4">
-        Sistem Rekomendasi Produk <span class="text-blue-600">UMKM</span>
-    </h1>
-    
-    <p class="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mb-8">
-        Temukan produk-produk UMKM terbaik yang sesuai dengan minat dan kebutuhan Anda. Menggunakan teknologi AI untuk rekomendasi akurat.
-    </p>
 
-    <button class="px-6 py-3 bg-blue-600 text-white rounded-xl shadow-md hover:bg-blue-700 transition">
-        Mulai Jelajahi
-    </button> -->
+	<!-- KANAN -->
+	<div class="w-full sm:w-1/2 flex justify-center">
+		<img
+			src="https://kontrakhukum.com/media/2022/11/peran-umkm-dalam-resesi.jpg"
+			alt="UMKM"
+			class="rounded-3xl shadow-xl w-full max-w-md object-cover"
+		/>
+	</div>
 </section>
 
 <section class="px-6 py-20">
